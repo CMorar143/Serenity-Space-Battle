@@ -2,6 +2,7 @@
 
 ### Premise
 This project will focus on recreating a space battle from the sci-fi movie Serenity (2005). The space battle will be recreated using the Unity3D game engine. The space battle recreated for this project can be found below:
+
 [![Video](https://img.youtube.com/vi/X_VSJfHiNPA/0.jpg)](https://www.youtube.com/watch?v=X_VSJfHiNPA) 
 
 ### Story Synopsis
