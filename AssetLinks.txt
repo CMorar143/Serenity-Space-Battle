@@ -16,9 +16,10 @@ https://sketchfab.com/3d-models/tmp-guardian-starfighter-1feceb93b58e46f0912eb95
 
 
 ################# WALL-E #################
-https://sketchfab.com/3d-models/sponge-bob-patrick-starfish-a2f02218c5ba45ec918b1a724137263a
-
 https://sketchfab.com/3d-models/fat-man-37a9732cb03f4b5eaf94ec8207a7d4f3
+(NOT USING ATM ^^)
+
+https://sketchfab.com/3d-models/sponge-bob-patrick-starfish-a2f02218c5ba45ec918b1a724137263a
 
 https://sketchfab.com/3d-models/high-tech-lounge-chair-hp-1fe6b5c9822947b1a7de83959370bce8
 
@@ -29,6 +30,10 @@ https://sketchfab.com/3d-models/walle-6683d7f95d9b480d93f3d375b6e6c083
 https://sketchfab.com/3d-models/m-o-03b8a1e96e4c470c83eba6daa66935f5
 
 https://sketchfab.com/3d-models/eva-13a570861f9a47c69b0b34b22c4c522c
+
+https://sketchfab.com/3d-models/imperial-cruiser-1-6f599602a94940828a814b16be8d757d
+
+
 
 # food
 # water
