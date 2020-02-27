@@ -11,4 +11,10 @@ The scene begins with an opening title card along with a brief description of wh
 
 **The Storyboard is as Follows:**
 
-1. ![Storyboard 1](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/1.JPG)
+![Storyboard 1](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/1.JPG)
+![Storyboard 2](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/2.JPG)
+![Storyboard 3](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/3.JPG)
+![Storyboard 4](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/4.JPG)
+![Storyboard 5](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/5.JPG)
+![Storyboard 6](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/6.JPG)
+![Storyboard 7](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/7.JPG)
