@@ -23,7 +23,7 @@ The scene begins with an opening title card along with a brief description of wh
 
 
 
-If the incredible art above does not fully convey the idea too well, here is the same storyboard recreated with unity and shots from the movie itself:
+**If the incredible art above does not fully convey the idea too well, here is the same storyboard recreated with unity and shots from the movie itself:**
 
 ![Storyboard 1](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/1.JPG)
 ![Storyboard 2](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/2.JPG)
