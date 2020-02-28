@@ -13,13 +13,25 @@ The scene begins with an opening title card along with a brief description of wh
 
 **The Storyboard is as Follows:**
 
-![Storyboard 1](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/1.JPG)
-![Storyboard 2](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/2.JPG)
-![Storyboard 3](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/3.JPG)
-![Storyboard 4](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/4.JPG)
-![Storyboard 5](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/5.JPG)
-![Storyboard 6](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/6.JPG)
-![Storyboard 7](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/7.JPG)
+![Storyboard 1](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/1.jpg)
+![Storyboard 2](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/2.jpg)
+![Storyboard 3](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/3.jpg)
+![Storyboard 4](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/4.jpg)
+![Storyboard 5](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/5.jpg)
+![Storyboard 6](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/6.jpg)
+![Storyboard 7](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Drawn/7.jpg)
+
+
+
+If the incredible art above does not fully convey the idea too well, here is the same storyboard recreated with unity and shots from the movie itself:
+
+![Storyboard 1](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/1.JPG)
+![Storyboard 2](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/2.JPG)
+![Storyboard 3](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/3.JPG)
+![Storyboard 4](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/4.JPG)
+![Storyboard 5](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/5.JPG)
+![Storyboard 6](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/6.JPG)
+![Storyboard 7](https://github.com/CMorar143/Serenity-Space-Battle/blob/master/StoryBoard/Final/Good/7.JPG)
 
 
 
