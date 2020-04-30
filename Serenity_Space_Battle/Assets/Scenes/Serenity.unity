@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107822547}
   m_Layer: 0
-  m_Name: Wave
+  m_Name: bad_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ Transform:
   m_Children:
   - {fileID: 19783318952780614}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288815746
 GameObject:
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654643265}
   m_Layer: 0
-  m_Name: good#2
+  m_Name: good_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +226,7 @@ Transform:
   m_Children:
   - {fileID: 6027838533585833173}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1166703231
 GameObject:
@@ -238,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166703232}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: good_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,7 @@ Transform:
   m_Children:
   - {fileID: 4903189069720189060}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1505691907
 GameObject:
@@ -443,7 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615024600}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bad_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +462,7 @@ Transform:
   m_Children:
   - {fileID: 5006512735886068794}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625264735
 GameObject:
@@ -474,7 +474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625264736}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: good_main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,7 +493,7 @@ Transform:
   m_Children:
   - {fileID: 1006291333396881959}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1718919957
 GameObject:
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 1718919959}
   - component: {fileID: 1718919958}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bad_main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,7 +558,7 @@ Transform:
   m_Children:
   - {fileID: 5006512735312170716}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721684616
 GameObject:
@@ -570,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721684617}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bad_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ Transform:
   m_Children:
   - {fileID: 5006512735390028264}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781630676
 GameObject:
@@ -601,7 +601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781630677}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bad_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +620,7 @@ Transform:
   m_Children:
   - {fileID: 2897476985846222441}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7708622941750527
 Transform:
@@ -3309,7 +3309,7 @@ Transform:
   - {fileID: 4900921735190177806}
   - {fileID: 2178187241286750284}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1430378851445639041
 MeshRenderer:
@@ -5178,7 +5178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424410106575487127}
   m_Layer: 0
-  m_Name: Tri_Fighter
+  m_Name: bad_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8945,7 +8945,7 @@ Transform:
   - {fileID: 1526167162050352130}
   - {fileID: 2917907047068212040}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4943599720297202164
 MeshFilter:
@@ -9059,7 +9059,7 @@ Transform:
   - {fileID: 1391665809173772620}
   - {fileID: 8657355558572823852}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5006512735312170716
 Transform:
@@ -14640,7 +14640,7 @@ GameObject:
   - component: {fileID: 4939022141024409446}
   - component: {fileID: 3026680331430803996}
   m_Layer: 0
-  m_Name: Trader
+  m_Name: good_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14759,7 +14759,7 @@ GameObject:
   - component: {fileID: 5000697137027320935}
   - component: {fileID: 3164913763057344797}
   m_Layer: 0
-  m_Name: dvergr11.fbx
+  m_Name: bad_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
