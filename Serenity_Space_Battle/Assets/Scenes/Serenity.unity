@@ -151,52 +151,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &288815746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 288815748}
-  - component: {fileID: 288815747}
-  m_Layer: 0
-  m_Name: PathGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &288815747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288815746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6caf0b9806867742bfb468fbfcc8b42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints: []
-  isLooped: 0
-  waypointDist: 100
---- !u!4 &288815748
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288815746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 181.4, y: 92.72284, z: 135.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654643264
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +458,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718919959}
-  - component: {fileID: 1718919958}
   m_Layer: 0
   m_Name: bad_main
   m_TagString: Untagged
@@ -512,39 +465,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1718919958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718919957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc10140e221a3b44a98ce9e55f0bf8ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 0, z: 0}
-  mass: 1
-  maxSpeed: 20
-  maxForce: 20
-  speed: 0
-  seekEnabled: 1
-  target: {x: 0, y: 0, z: 0}
-  targetTransform: {fileID: 288815748}
-  waypoints: []
-  numwaypoints: 5
-  arriveEnabled: 0
-  slowingDistance: 10
-  banking: 0.1
-  playerSteeringEnabled: 0
-  playerForce: 100
-  damping: 0.1
-  pursueTarget: {fileID: 0}
-  pursueEnabled: 0
-  pursueTargetPos: {x: 0, y: 0, z: 0}
 --- !u!4 &1718919959
 Transform:
   m_ObjectHideFlags: 0
