@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 107822547}
   m_Layer: 0
   m_Name: bad_3
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 654643265}
   m_Layer: 0
   m_Name: good_2
-  m_TagString: Untagged
+  m_TagString: GoodGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1166703232}
   m_Layer: 0
   m_Name: good_3
-  m_TagString: Untagged
+  m_TagString: GoodGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1615024600}
   m_Layer: 0
   m_Name: bad_6
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 1625264736}
   m_Layer: 0
   m_Name: good_main
-  m_TagString: Untagged
+  m_TagString: GoodGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 1718919959}
   m_Layer: 0
   m_Name: bad_main
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 1721684617}
   m_Layer: 0
   m_Name: bad_5
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 1781630677}
   m_Layer: 0
   m_Name: bad_4
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5193,7 +5193,7 @@ GameObject:
   - component: {fileID: 1424410106575487127}
   m_Layer: 0
   m_Name: bad_1
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14669,7 +14669,7 @@ GameObject:
   - component: {fileID: 3026680331430803996}
   m_Layer: 0
   m_Name: good_1
-  m_TagString: Untagged
+  m_TagString: GoodGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14788,7 +14788,7 @@ GameObject:
   - component: {fileID: 3164913763057344797}
   m_Layer: 0
   m_Name: bad_2
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
