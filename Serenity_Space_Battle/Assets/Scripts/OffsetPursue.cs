@@ -6,7 +6,6 @@ public class OffsetPursue : MonoBehaviour
 {
 	public GameObject badMain;
 
-
     // Start is called before the first frame update
     void Start()
     {

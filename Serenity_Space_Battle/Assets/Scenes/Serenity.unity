@@ -489,9 +489,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1718919959}
   - component: {fileID: 1718919958}
+  - component: {fileID: 1718919960}
   m_Layer: 0
   m_Name: bad_main
-  m_TagString: BadGuy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,6 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f82b3d4c3016464190ca9857695c2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  badMain: {fileID: 0}
 --- !u!4 &1718919959
 Transform:
   m_ObjectHideFlags: 0
@@ -523,6 +525,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1718919960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718919957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22649326a35d874c90cbcf3fa9c2960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antagonists: []
 --- !u!1 &1721684616
 GameObject:
   m_ObjectHideFlags: 0
