@@ -2,22 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OffsetPursue : MonoBehaviour
+public class OffsetPursue : SteeringBehaviour
 {
-	public GameObject badMain;
+	public Mothership badMain;
 	private Vector3 offset;
-	private Vector3 target;
+	Vector3 worldtarget;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Use this for initialization
+	void Start()
+	{
 		offset = transform.position - badMain.transform.position;
 		offset = Quaternion.Inverse(badMain.transform.rotation) * offset;
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	// Update is called once per frame
+	void Update()
+	{
+
+	}
+
+	public override Vector3 CalculateForces()
+	{
+		worldtarget = badMain.transform.TransformPoint(offset);
+		float dist = Vector3.Distance(worldtarget, transform.position);
+		float time = dist / leader.maxSpeed;
+
+		Vector3 targetPos = worldtarget + badMain.velocity * time;
+		return leader.Arrive(targetPos, 10);
+	}
 }

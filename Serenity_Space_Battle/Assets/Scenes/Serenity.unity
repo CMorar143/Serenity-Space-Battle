@@ -488,8 +488,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718919959}
-  - component: {fileID: 1718919958}
   - component: {fileID: 1718919960}
+  - component: {fileID: 1718919961}
   m_Layer: 0
   m_Name: bad_main
   m_TagString: Untagged
@@ -497,19 +497,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1718919958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718919957}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f82b3d4c3016464190ca9857695c2f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  badMain: {fileID: 0}
 --- !u!4 &1718919959
 Transform:
   m_ObjectHideFlags: 0
@@ -537,19 +524,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22649326a35d874c90cbcf3fa9c2960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antagonists: []
-  startingPos: {fileID: 1728442262}
-  target: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   maxSpeed: 20
-  slowingDistance: 10
-  damping: 0.01
   banking: 0.1
-  SeekEnabled: 0
-  ArriveEnabled: 1
+  damping: 0.01
+--- !u!114 &1718919961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718919957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5f15750c7f04a46a8dfca1e20cff52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  leader: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  targetGameObject: {fileID: 1728442262}
 --- !u!1 &1721684616
 GameObject:
   m_ObjectHideFlags: 0

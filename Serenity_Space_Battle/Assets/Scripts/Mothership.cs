@@ -4,32 +4,28 @@ using UnityEngine;
 
 public class Mothership : MonoBehaviour
 {
-	public GameObject[] antagonists;
-	public GameObject startingPos;
-	public Vector3 target;
+	List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
+
 	public Vector3 force = Vector3.zero;
 	public Vector3 acceleration = Vector3.zero;
 	public Vector3 velocity = Vector3.zero;
 	public float mass = 1;
 	public float maxSpeed = 10.0f;
-	public float slowingDistance = 10;
-	public float damping = 0.01f;
 
 	[Range(0.0f, 1.0f)]
 	public float banking = 0.1f;
 
-	public bool SeekEnabled = false;
-	public bool ArriveEnabled = false;
+	public float damping = 0.01f;
 
 
-	// Start is called before the first frame update
+	// Use this for initialization
 	void Start()
 	{
-		antagonists = GameObject.FindGameObjectsWithTag("BadGuy");
+		SteeringBehaviour[] behaviours = GetComponents<SteeringBehaviour>();
 
-		foreach (GameObject badGuy in antagonists)
+		foreach (SteeringBehaviour b in behaviours)
 		{
-			badGuy.AddComponent<OffsetPursue>().badMain = this.gameObject;
+			this.behaviours.Add(b);
 		}
 	}
 
@@ -41,47 +37,39 @@ public class Mothership : MonoBehaviour
 		return desired - velocity;
 	}
 
-	public Vector3 Arrive(Vector3 target)
+	public Vector3 Arrive(Vector3 target, float slowingDistance = 15.0f, float deceleration = 1.0f)
 	{
 		Vector3 toTarget = target - transform.position;
-		float dist = toTarget.magnitude;
-		Vector3 desired;
 
-		if (dist < 7)
+		float distance = toTarget.magnitude;
+		if (distance < 7)
 		{
-			ArriveEnabled = false;
-			desired = Vector3.zero;
+			GetComponent<Arrive>().enabled = false;
 			damping = 2.0f;
+			//behaviours.Find(Arrive).isActiveAndEnabled = false;
+			return Vector3.zero;
 		}
+		float ramped = maxSpeed * (distance / (slowingDistance * deceleration));
 
-		else
-		{
-			float ramped = (dist / slowingDistance) * maxSpeed;
-			float clamped = Mathf.Min(ramped, maxSpeed);
-			desired = clamped * (toTarget / dist);
-		}
-		
+		float clamped = Mathf.Min(ramped, maxSpeed);
+		Vector3 desired = clamped * (toTarget / distance);
+
 		return desired - velocity;
 	}
 
+
 	Vector3 CalculateForces()
 	{
-		Vector3 force = Vector3.zero;
-		if (startingPos != null)
-		{
-			target = startingPos.transform.position;
-		}
-
 		force = Vector3.zero;
-		if (SeekEnabled)
+
+		foreach (SteeringBehaviour b in behaviours)
 		{
-			force += Seek(target);
+			if (b.isActiveAndEnabled)
+			{
+				force += b.CalculateForces() * b.weight;
+			}
 		}
 
-		if (ArriveEnabled)
-		{
-			force += Arrive(target);
-		}
 		return force;
 	}
 
