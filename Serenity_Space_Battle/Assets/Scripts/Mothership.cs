@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Mothership : MonoBehaviour
 {
-	List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
+	public List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
 
+	public GameObject[] antagonists;
 	public Vector3 force = Vector3.zero;
 	public Vector3 acceleration = Vector3.zero;
 	public Vector3 velocity = Vector3.zero;
 	public float mass = 1;
-	public float maxSpeed = 10.0f;
+	public float maxSpeed = 20.0f;
 
 	[Range(0.0f, 1.0f)]
 	public float banking = 0.1f;
@@ -27,6 +28,18 @@ public class Mothership : MonoBehaviour
 		{
 			this.behaviours.Add(b);
 		}
+
+		// Only happen if its the leader
+		if (gameObject.tag != "BadGuy")
+		{
+			antagonists = GameObject.FindGameObjectsWithTag("BadGuy");
+
+			foreach (GameObject badGuy in antagonists)
+			{
+				badGuy.AddComponent<Mothership>();
+				badGuy.AddComponent<OffsetPursue>().badMain = this;
+			}
+		}
 	}
 
 	public Vector3 Seek(Vector3 target)
@@ -42,11 +55,19 @@ public class Mothership : MonoBehaviour
 		Vector3 toTarget = target - transform.position;
 
 		float distance = toTarget.magnitude;
-		if (distance < 7)
+		if (distance < 7 && gameObject.tag != "BadGuy")
 		{
 			GetComponent<Arrive>().enabled = false;
 			damping = 2.0f;
-			//behaviours.Find(Arrive).isActiveAndEnabled = false;
+
+			foreach (GameObject badGuy in antagonists)
+			{
+				Mothership m = badGuy.GetComponent<Mothership>();
+				m.damping = 0.7f;
+
+				badGuy.GetComponent<OffsetPursue>().enabled = false;
+			}
+
 			return Vector3.zero;
 		}
 		float ramped = maxSpeed * (distance / (slowingDistance * deceleration));

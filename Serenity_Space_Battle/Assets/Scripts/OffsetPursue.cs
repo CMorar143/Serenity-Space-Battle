@@ -28,6 +28,9 @@ public class OffsetPursue : SteeringBehaviour
 		float time = dist / leader.maxSpeed;
 
 		Vector3 targetPos = worldtarget + badMain.velocity * time;
-		return leader.Arrive(targetPos, 10);
+		targetPos = leader.Arrive(targetPos, 10);
+		Debug.Log(worldtarget);
+		// Prevent movement in any other direction
+		return new Vector3(0, 0, targetPos.z);
 	}
 }
