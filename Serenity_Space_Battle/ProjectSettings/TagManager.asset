@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BadGuy
   - GoodGuy
+  - Mothership
   layers:
   - Default
   - TransparentFX
