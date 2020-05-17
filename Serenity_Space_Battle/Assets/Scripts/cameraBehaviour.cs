@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameraBehaviour : MonoBehaviour
 {
 	private GameObject cam;
-	public float rotSpeed = 20.0f;
+	public float rotSpeed = 35.0f;
 	public float speed = 1.0f;
 	private float journeyLength;
 
@@ -18,7 +18,7 @@ public class cameraBehaviour : MonoBehaviour
 
 	IEnumerator LerpCamera(Vector3 source, Vector3 target, float overTime)
 	{
-		yield return new WaitForSecondsRealtime(5f);
+		yield return new WaitForSecondsRealtime(3f);
 		float startTime = Time.time;
 
 		while (Time.time < startTime + overTime)
@@ -44,7 +44,8 @@ public class cameraBehaviour : MonoBehaviour
 	{
 		if (other.tag == "Mothership")
 		{
-			StartCoroutine(LerpCamera(cam.transform.position, this.transform.position, 3.0f));
+			Vector3 target = transform.position + new Vector3(0, 10);
+			StartCoroutine(LerpCamera(cam.transform.position, target, 3.0f));
 		}
 	}
 
