@@ -5,6 +5,7 @@ using UnityEngine;
 public class cameraBehaviour : MonoBehaviour
 {
 	private GameObject cam;
+	public float rotSpeed = 20.0f;
 	public float speed = 1.0f;
 	private float journeyLength;
 
@@ -23,6 +24,12 @@ public class cameraBehaviour : MonoBehaviour
 		while (Time.time < startTime + overTime)
 		{
 			cam.transform.position = Vector3.Lerp(source, target, (Time.time - startTime) / overTime);
+			cam.transform.rotation = Quaternion.RotateTowards
+				(
+					cam.transform.rotation,
+					transform.rotation,
+					rotSpeed * Time.deltaTime
+				);
 			yield return null;
 		}
 		cam.transform.position = target;

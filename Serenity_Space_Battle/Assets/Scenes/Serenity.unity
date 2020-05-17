@@ -5411,7 +5411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e878c8e52a70e554095ada834837872d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  rotSpeed: 20
+  speed: 1
 --- !u!54 &1728442265
 Rigidbody:
   m_ObjectHideFlags: 0
