@@ -5243,7 +5243,7 @@ GameObject:
   - component: {fileID: 1625264738}
   m_Layer: 0
   m_Name: good_main
-  m_TagString: GoodGuy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5279,7 +5279,7 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 20
+  maxSpeed: 35
   target: {fileID: 471611591}
   arriveEnabled: 0
   banking: 0.1

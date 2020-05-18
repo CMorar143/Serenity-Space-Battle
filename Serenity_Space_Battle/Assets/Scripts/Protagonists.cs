@@ -39,7 +39,7 @@ public class Protagonists : MonoBehaviour
 		float distance = toTarget.magnitude;
 		if (distance < 7)
 		{
-			GetComponent<Arrive>().enabled = false;
+			arriveEnabled = false;
 			damping = 2.0f;
 
 			return Vector3.zero;
