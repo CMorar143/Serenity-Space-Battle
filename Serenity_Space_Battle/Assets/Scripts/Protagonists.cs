@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Protagonists : MonoBehaviour
 {
+	public GameObject[] protagonists;
+
 	public Vector3 force = Vector3.zero;
 	public Vector3 acceleration = Vector3.zero;
 	public Vector3 velocity = Vector3.zero;
 	public float mass = 1;
-	public float maxSpeed = 20.0f;
+	public float maxSpeed = 35.0f;
 	public Transform target;
 	public bool arriveEnabled = false;
 
@@ -21,7 +23,17 @@ public class Protagonists : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		// Only happen if its the leader
+		if (gameObject.tag != "GoodGuy")
+		{
+			protagonists = GameObject.FindGameObjectsWithTag("GoodGuy");
 
+			//foreach (GameObject goodGuy in protagonists)
+			//{
+			//	goodGuy.AddComponent<Protagonists>();
+			//	goodGuy.AddComponent<OffsetPursue>().badMain = this;
+			//}
+		}
 	}
 
 	public Vector3 Seek(Vector3 target)

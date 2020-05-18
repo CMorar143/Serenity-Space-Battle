@@ -18,7 +18,6 @@ public class Mothership : MonoBehaviour
 
 	public float damping = 0.01f;
 
-
 	// Use this for initialization
 	void Start()
 	{
@@ -29,11 +28,18 @@ public class Mothership : MonoBehaviour
 			this.behaviours.Add(b);
 		}
 
-		// Only happen if its the leader
-		if (gameObject.tag != "BadGuy")
+		if (gameObject.tag == "Mothership")
 		{
 			antagonists = GameObject.FindGameObjectsWithTag("BadGuy");
+		}
 
+		else if (gameObject.tag == "Serenity")
+		{
+			antagonists = GameObject.FindGameObjectsWithTag("GoodGuy");
+		}
+
+		if (antagonists != null)
+		{
 			foreach (GameObject badGuy in antagonists)
 			{
 				badGuy.AddComponent<Mothership>();
@@ -55,7 +61,7 @@ public class Mothership : MonoBehaviour
 		Vector3 toTarget = target - transform.position;
 
 		float distance = toTarget.magnitude;
-		if (distance < 7 && gameObject.tag != "BadGuy")
+		if (distance < 7 && antagonists != null)
 		{
 			GetComponent<Arrive>().enabled = false;
 			damping = 2.0f;

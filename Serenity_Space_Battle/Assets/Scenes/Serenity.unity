@@ -5240,10 +5240,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1625264736}
-  - component: {fileID: 1625264738}
+  - component: {fileID: 1625264737}
+  - component: {fileID: 1625264739}
   m_Layer: 0
   m_Name: good_main
-  m_TagString: Untagged
+  m_TagString: Serenity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5263,7 +5264,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1625264738
+--- !u!114 &1625264737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5272,18 +5273,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1625264735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8941ce9a9cefa564b8d2742aac0527b3, type: 3}
+  m_Script: {fileID: 11500000, guid: d22649326a35d874c90cbcf3fa9c2960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behaviours: []
+  antagonists: []
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 35
-  target: {fileID: 471611591}
-  arriveEnabled: 0
+  maxSpeed: 20
   banking: 0.1
   damping: 0.01
+--- !u!114 &1625264739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625264735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5f15750c7f04a46a8dfca1e20cff52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  leader: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  targetGameObject: {fileID: 471611590}
 --- !u!1 &1718919957
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,7 +5390,6 @@ MonoBehaviour:
   weight: 1
   force: {x: 0, y: 0, z: 0}
   leader: {fileID: 0}
-  protagonists: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   slowingDistance: 15
   targetGameObject: {fileID: 1728442262}

@@ -14,14 +14,11 @@ public class cameraBehaviour : MonoBehaviour
 
 	// For keeping track of coroutine
 	private int counter = 0;
-	//private int maxCounter = 3;
 	private bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
     {
-		//maxCounter = GetComponents<AudioSource>().Length;
-		//Debug.Log(maxCounter);
 		cam = GameObject.FindGameObjectWithTag("MainCamera");
 		startingPos = cam.transform.position;
 		startingRot = cam.transform.rotation;
@@ -63,8 +60,7 @@ public class cameraBehaviour : MonoBehaviour
 		if (counter == 2)
 		{
 			Debug.Log("counter is 2");
-			Protagonists c = FindObjectOfType<Protagonists>();
-			c.arriveEnabled = true;
+			
 		}
 
 		isRunning = false;
