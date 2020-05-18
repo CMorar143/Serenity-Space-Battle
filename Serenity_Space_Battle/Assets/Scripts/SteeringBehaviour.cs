@@ -11,6 +11,7 @@ public abstract class SteeringBehaviour : MonoBehaviour
 
 	[HideInInspector]
 	public Mothership leader;
+	public Protagonists protagonists;
 
 	public void Awake()
 	{

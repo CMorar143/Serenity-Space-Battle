@@ -35,7 +35,7 @@ public class cameraBehaviour : MonoBehaviour
 			clip.Play();
 		}
 
-		yield return new WaitForSecondsRealtime(5f);
+		yield return new WaitForSecondsRealtime(2f);
 		float startTime = Time.time;
 
 		while (Time.time < startTime + overTime)
@@ -72,10 +72,19 @@ public class cameraBehaviour : MonoBehaviour
 	{
 		if (other.tag == "Mothership")
 		{
-			if (!isRunning && counter <= 1)
+			if (!isRunning)
 			{
-				Debug.Log("its not running in trig stay");
-				StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
+				if (counter <= 1)
+				{
+					Debug.Log("its not running in trig stay");
+					StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
+				}
+
+				else if (counter == 2)
+				{
+					Protagonists c = FindObjectOfType<Protagonists>();
+					c.arriveEnabled = true;
+				}
 			}
 		}
 	}
