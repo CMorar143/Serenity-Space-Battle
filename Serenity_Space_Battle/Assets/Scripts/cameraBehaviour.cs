@@ -6,6 +6,7 @@ public class cameraBehaviour : MonoBehaviour
 {
 	private GameObject cam;
 	private Vector3 startingPos;
+	private Quaternion startingRot;
 	public GameObject mothership;
 	private AudioSource clip;
 	public float rotSpeed = 35.0f;
@@ -16,10 +17,11 @@ public class cameraBehaviour : MonoBehaviour
     {
 		cam = GameObject.FindGameObjectWithTag("MainCamera");
 		startingPos = cam.transform.position;
+		startingRot = cam.transform.rotation;
 		clip = GetComponent<AudioSource>();
 	}
 
-	IEnumerator LerpCamera(Vector3 source, Vector3 target, float overTime)
+	IEnumerator LerpCamera(Vector3 source, Vector3 target, Quaternion rotDirection, float overTime)
 	{
 		// Everyone in pos, something coming through the cloud
 		if (!clip.isPlaying)
@@ -36,7 +38,7 @@ public class cameraBehaviour : MonoBehaviour
 			cam.transform.rotation = Quaternion.RotateTowards
 				(
 					cam.transform.rotation,
-					transform.rotation,
+					rotDirection,
 					rotSpeed * Time.deltaTime
 				);
 			yield return null;
@@ -45,7 +47,11 @@ public class cameraBehaviour : MonoBehaviour
 
 		// AUDIO: he's mad
 		// CAMERA: pans back to startPos
+		Debug.Log(cam.transform.position);
+		Debug.Log(startingPos);
+		StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
 		// AUDIO: he's not even changing course
+
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -53,7 +59,8 @@ public class cameraBehaviour : MonoBehaviour
 		if (other.tag == "Mothership")
 		{
 			Vector3 target = transform.position + new Vector3(0, 10);
-			StartCoroutine(LerpCamera(cam.transform.position, target, 3.0f));
+			Quaternion rotDirection = transform.rotation;
+			StartCoroutine(LerpCamera(cam.transform.position, target, rotDirection, 3.0f));
 		}
 	}
 
