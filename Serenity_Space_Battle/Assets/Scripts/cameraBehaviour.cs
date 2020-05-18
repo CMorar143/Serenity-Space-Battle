@@ -12,6 +12,10 @@ public class cameraBehaviour : MonoBehaviour
 	public float rotSpeed = 35.0f;
 	public float speed = 1.0f;
 
+	// For keeping track of coroutine
+	private int counter = 0;
+	private bool isRunning = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,8 @@ public class cameraBehaviour : MonoBehaviour
 
 	IEnumerator LerpCamera(Vector3 source, Vector3 target, Quaternion rotDirection, float overTime)
 	{
+		isRunning = true;
+
 		// Everyone in pos, something coming through the cloud
 		if (!clip.isPlaying)
 		{
@@ -47,9 +53,9 @@ public class cameraBehaviour : MonoBehaviour
 
 		// AUDIO: he's mad
 		// CAMERA: pans back to startPos
-		StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
 		// AUDIO: he's not even changing course
-
+		counter++;
+		isRunning = false;
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -59,6 +65,18 @@ public class cameraBehaviour : MonoBehaviour
 			Vector3 target = transform.position + new Vector3(0, 10);
 			Quaternion rotDirection = transform.rotation;
 			StartCoroutine(LerpCamera(cam.transform.position, target, rotDirection, 3.0f));
+		}
+	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.tag == "Mothership")
+		{
+			if (!isRunning && counter <= 1)
+			{
+				Debug.Log("its not running in trig stay");
+				StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
+			}
 		}
 	}
 
