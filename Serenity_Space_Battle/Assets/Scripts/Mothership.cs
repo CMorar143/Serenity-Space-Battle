@@ -36,6 +36,7 @@ public class Mothership : MonoBehaviour
 		else if (gameObject.tag == "Serenity")
 		{
 			antagonists = GameObject.FindGameObjectsWithTag("GoodGuy");
+			GetComponent<Arrive>().enabled = false;
 		}
 
 		if (antagonists != null)
