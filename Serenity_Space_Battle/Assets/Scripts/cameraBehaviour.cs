@@ -6,6 +6,7 @@ public class cameraBehaviour : MonoBehaviour
 {
 	private GameObject cam;
 	private Vector3 startingPos;
+	public GameObject mothership;
 	private AudioSource clip;
 	public float rotSpeed = 35.0f;
 	public float speed = 1.0f;
@@ -20,12 +21,13 @@ public class cameraBehaviour : MonoBehaviour
 
 	IEnumerator LerpCamera(Vector3 source, Vector3 target, float overTime)
 	{
+		// Everyone in pos, something coming through the cloud
 		if (!clip.isPlaying)
 		{
 			clip.Play();
 		}
 
-		yield return new WaitForSecondsRealtime(3f);
+		yield return new WaitForSecondsRealtime(5f);
 		float startTime = Time.time;
 
 		while (Time.time < startTime + overTime)
@@ -40,6 +42,10 @@ public class cameraBehaviour : MonoBehaviour
 			yield return null;
 		}
 		cam.transform.position = target;
+
+		// AUDIO: he's mad
+		// CAMERA: pans back to startPos
+		// AUDIO: he's not even changing course
 	}
 
 	private void OnTriggerEnter(Collider other)
