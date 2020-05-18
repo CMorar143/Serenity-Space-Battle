@@ -61,11 +61,11 @@ public class cameraBehaviour : MonoBehaviour
 		{
 			Debug.Log("counter is 2");
 			GameObject.FindGameObjectWithTag("Serenity").GetComponent<Arrive>().enabled = true;
-			GameObject[] followers = GameObject.FindGameObjectsWithTag("GoodGuy");
 
-			foreach (GameObject follower in followers)
+			foreach (GameObject follower in GameObject.FindGameObjectsWithTag("GoodGuy"))
 			{
-				follower.GetComponent<Arrive>().enabled = true;
+				Debug.Log("ent");
+				follower.GetComponent<OffsetPursue>().enabled = false;
 			}
 		}
 
@@ -79,6 +79,15 @@ public class cameraBehaviour : MonoBehaviour
 			Vector3 target = transform.position + new Vector3(0, 10);
 			Quaternion rotDirection = transform.rotation;
 			StartCoroutine(LerpCamera(cam.transform.position, target, rotDirection, 3.0f));
+		}
+
+		else if (other.tag == "Serenity")
+		{
+			foreach (GameObject follower in GameObject.FindGameObjectsWithTag("GoodGuy"))
+			{
+				Debug.Log("ent");
+				follower.GetComponent<OffsetPursue>().enabled = true;
+			}
 		}
 	}
 

@@ -45,6 +45,11 @@ public class Mothership : MonoBehaviour
 			{
 				badGuy.AddComponent<Mothership>();
 				badGuy.AddComponent<OffsetPursue>().badMain = this;
+
+				//if (gameObject.tag == "Serenity")
+				//{
+				//	badGuy.GetComponent<OffsetPursue>().enabled = false;
+				//}
 			}
 		}
 	}
