@@ -5,19 +5,26 @@ using UnityEngine;
 public class cameraBehaviour : MonoBehaviour
 {
 	private GameObject cam;
+	private Vector3 startingPos;
+	private AudioSource clip;
 	public float rotSpeed = 35.0f;
 	public float speed = 1.0f;
-	private float journeyLength;
 
     // Start is called before the first frame update
     void Start()
     {
 		cam = GameObject.FindGameObjectWithTag("MainCamera");
-		journeyLength = Vector3.Distance(cam.transform.position, this.transform.position);
-    }
+		startingPos = cam.transform.position;
+		clip = GetComponent<AudioSource>();
+	}
 
 	IEnumerator LerpCamera(Vector3 source, Vector3 target, float overTime)
 	{
+		if (!clip.isPlaying)
+		{
+			clip.Play();
+		}
+
 		yield return new WaitForSecondsRealtime(3f);
 		float startTime = Time.time;
 
@@ -34,11 +41,6 @@ public class cameraBehaviour : MonoBehaviour
 		}
 		cam.transform.position = target;
 	}
-
-	//private void LerpCamera()
-	//{
-		
-	//}
 
 	private void OnTriggerEnter(Collider other)
 	{
