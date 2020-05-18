@@ -47,8 +47,6 @@ public class cameraBehaviour : MonoBehaviour
 
 		// AUDIO: he's mad
 		// CAMERA: pans back to startPos
-		Debug.Log(cam.transform.position);
-		Debug.Log(startingPos);
 		StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
 		// AUDIO: he's not even changing course
 
