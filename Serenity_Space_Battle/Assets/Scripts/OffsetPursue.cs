@@ -8,11 +8,14 @@ public class OffsetPursue : SteeringBehaviour
 	public Vector3 offset;
 	public Vector3 worldtarget;
 
+	public GameObject startingPos;
+
 	// Use this for initialization
 	void Start()
 	{
 		offset = transform.position - badMain.transform.position;
 		offset = Quaternion.Inverse(badMain.transform.rotation) * offset;
+		startingPos = GameObject.FindGameObjectWithTag("GoodStartingPos");
 	}
 
 	// Update is called once per frame
@@ -33,10 +36,10 @@ public class OffsetPursue : SteeringBehaviour
 
 		if (gameObject.tag == "GoodGuy")
 		{
-			if (targetPos.z <= 3)
+			if (targetPos.z <= 3 && startingPos.GetComponent<cameraBehaviour>().standoffOccurred)
 			{
 				gameObject.GetComponent<OffsetPursue>().enabled = false;
-
+				Debug.Log("STANDOFF");
 				return Vector3.zero;
 			}
 		}

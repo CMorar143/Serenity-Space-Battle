@@ -16,8 +16,11 @@ public class cameraBehaviour : MonoBehaviour
 	private int counter = 0;
 	private bool isRunning = false;
 
-    // Start is called before the first frame update
-    void Start()
+	// For keeping track of standoff completion
+	public bool standoffOccurred = false;
+
+	// Start is called before the first frame update
+	void Start()
     {
 		cam = GameObject.FindGameObjectWithTag("MainCamera");
 		startingPos = cam.transform.position;
@@ -66,6 +69,7 @@ public class cameraBehaviour : MonoBehaviour
 			{
 				Debug.Log("ent");
 				follower.GetComponent<OffsetPursue>().enabled = false;
+
 			}
 		}
 
@@ -87,6 +91,7 @@ public class cameraBehaviour : MonoBehaviour
 			{
 				Debug.Log("ent");
 				follower.GetComponent<OffsetPursue>().enabled = true;
+				standoffOccurred = true;
 			}
 		}
 	}

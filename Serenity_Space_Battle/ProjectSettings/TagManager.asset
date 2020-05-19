@@ -8,6 +8,7 @@ TagManager:
   - GoodGuy
   - Mothership
   - Serenity
+  - GoodStartingPos
   layers:
   - Default
   - TransparentFX
