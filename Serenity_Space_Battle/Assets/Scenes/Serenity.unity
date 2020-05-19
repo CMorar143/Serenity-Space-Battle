@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39379181}
+  - component: {fileID: 39379182}
   m_Layer: 0
   m_Name: safeZone
   m_TagString: Untagged
@@ -150,6 +151,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &39379182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39379180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5d090b51b014e4dad805bfa93d7b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  protagonists: []
+  antagonists: []
 --- !u!1 &107822545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5054,7 +5069,6 @@ GameObject:
   - component: {fileID: 654643265}
   - component: {fileID: 654643267}
   - component: {fileID: 654643266}
-  - component: {fileID: 654643268}
   - component: {fileID: 654643269}
   m_Layer: 0
   m_Name: good_2
@@ -5107,23 +5121,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &654643268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654643264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a06204d2d25603b4487978a4e3f94738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  leader: {fileID: 0}
-  targetGameObject: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
 --- !u!114 &654643269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5136,7 +5133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8941ce9a9cefa564b8d2742aac0527b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -5159,7 +5155,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1166703232}
   - component: {fileID: 1166703233}
-  - component: {fileID: 1166703235}
   - component: {fileID: 1166703234}
   - component: {fileID: 1166703236}
   m_Layer: 0
@@ -5213,23 +5208,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1166703235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166703231}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a06204d2d25603b4487978a4e3f94738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  leader: {fileID: 0}
-  targetGameObject: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
 --- !u!114 &1166703236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5242,7 +5220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8941ce9a9cefa564b8d2742aac0527b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -20107,7 +20084,6 @@ GameObject:
   - component: {fileID: 3026680331430803996}
   - component: {fileID: 8273595892340778359}
   - component: {fileID: 8273595892340778358}
-  - component: {fileID: 8273595892340778360}
   - component: {fileID: 8273595892340778361}
   m_Layer: 0
   m_Name: good_1
@@ -20145,23 +20121,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8273595892340778360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8273595892340778357}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a06204d2d25603b4487978a4e3f94738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  leader: {fileID: 0}
-  targetGameObject: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
 --- !u!114 &8273595892340778361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20174,7 +20133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8941ce9a9cefa564b8d2742aac0527b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -20335,7 +20293,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.02
+  m_Radius: 0.06
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8311457963941857797
 GameObject:

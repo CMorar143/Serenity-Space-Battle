@@ -96,30 +96,6 @@ public class Mothership : MonoBehaviour
 		return desired - velocity;
 	}
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "BadGuy" && gameObject.tag != other.tag)
-		{
-			gameObject.GetComponent<Protagonists>().SeekEnabled = false;
-			gameObject.GetComponent<Protagonists>().FleeEnabled = true;
-			gameObject.GetComponent<Protagonists>().fleeTarget = other.gameObject;
-		}
-	}
-
-	private void OnTriggerExit(Collider other)
-	{
-		if (other.tag == "BadGuy" && gameObject.tag != other.tag)
-		{
-			if (other.gameObject == gameObject.GetComponent<Protagonists>().fleeTarget)
-			{
-				//gameObject.GetComponent<Protagonists>().fleeTarget = null;
-				gameObject.GetComponent<Protagonists>().FleeEnabled = false;
-				gameObject.GetComponent<Protagonists>().SeekEnabled = true;
-			}
-		}
-	}
-
-
 	Vector3 CalculateForces()
 	{
 		force = Vector3.zero;

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Protagonists : MonoBehaviour
 {
-	//public Vector3 target = Vector3.zero;
 	public Vector3 force = Vector3.zero;
 	public Vector3 acceleration = Vector3.zero;
 	public Vector3 velocity = Vector3.zero;
@@ -32,16 +31,33 @@ public class Protagonists : MonoBehaviour
 
 	public Vector3 Flee(Vector3 target)
 	{
-		if (Vector3.Distance(transform.position, target) < fleeDistance)
+		Vector3 desired = target - transform.position;
+		desired.Normalize();
+		desired *= maxSpeed;
+
+		return velocity - desired;
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "BadGuy")
 		{
-			Vector3 desired = target - transform.position;
-			desired.Normalize();
-			desired *= maxSpeed;
-			return velocity - desired;
+			SeekEnabled = false;
+			FleeEnabled = true;
+			fleeTarget = other.gameObject;
 		}
-		else
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.tag == "BadGuy")
 		{
-			return Vector3.zero;
+			if (other.gameObject == fleeTarget)
+			{
+				//gameObject.GetComponent<Protagonists>().fleeTarget = null;
+				FleeEnabled = false;
+				SeekEnabled = true;
+			}
 		}
 	}
 
