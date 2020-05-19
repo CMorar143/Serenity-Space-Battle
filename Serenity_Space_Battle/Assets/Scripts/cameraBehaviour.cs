@@ -17,6 +17,7 @@ public class cameraBehaviour : MonoBehaviour
 	private bool isRunning = false;
 
 	// For keeping track of standoff completion
+	public bool leaderLeft = false;
 	public bool standoffOccurred = false;
 
 	// Start is called before the first frame update
@@ -91,7 +92,7 @@ public class cameraBehaviour : MonoBehaviour
 			{
 				Debug.Log("ent");
 				follower.GetComponent<OffsetPursue>().enabled = true;
-				standoffOccurred = true;
+				leaderLeft = true;
 			}
 		}
 	}

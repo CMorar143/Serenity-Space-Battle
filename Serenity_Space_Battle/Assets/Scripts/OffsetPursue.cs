@@ -36,9 +36,10 @@ public class OffsetPursue : SteeringBehaviour
 
 		if (gameObject.tag == "GoodGuy")
 		{
-			if (targetPos.z <= 3 && startingPos.GetComponent<cameraBehaviour>().standoffOccurred)
+			if (targetPos.z <= 3 && startingPos.GetComponent<cameraBehaviour>().leaderLeft)
 			{
 				gameObject.GetComponent<OffsetPursue>().enabled = false;
+				startingPos.GetComponent<cameraBehaviour>().standoffOccurred = true;
 				Debug.Log("STANDOFF");
 				gameObject.GetComponent<Protagonists>().SeekEnabled = true;
 				return Vector3.zero;
