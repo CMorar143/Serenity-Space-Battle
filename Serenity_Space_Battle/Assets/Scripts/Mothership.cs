@@ -43,13 +43,19 @@ public class Mothership : MonoBehaviour
 		{
 			foreach (GameObject badGuy in antagonists)
 			{
-				badGuy.AddComponent<Mothership>();
-				badGuy.AddComponent<OffsetPursue>().badMain = this;
+				if (gameObject.tag == "Serenity")
+				{
+					Debug.Log("serenity adding");
+					badGuy.AddComponent<Mothership>().maxSpeed = 70f;
+				}
 
-				//if (gameObject.tag == "Serenity")
-				//{
-				//	badGuy.GetComponent<OffsetPursue>().enabled = false;
-				//}
+				else
+				{
+					Debug.Log("mothership adding");
+					badGuy.AddComponent<Mothership>();
+				}
+
+				badGuy.AddComponent<OffsetPursue>().badMain = this;
 			}
 		}
 	}
