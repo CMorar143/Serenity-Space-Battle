@@ -25,7 +25,7 @@ public class OffsetPursue : SteeringBehaviour
 	{
 		worldtarget = badMain.transform.TransformPoint(offset);
 		float dist = Vector3.Distance(worldtarget, transform.position);
-		if (dist <= 3)
+		if (dist <= 7)
 		{
 			gameObject.GetComponent<OffsetPursue>().enabled = false;
 
@@ -35,7 +35,7 @@ public class OffsetPursue : SteeringBehaviour
 		float time = dist / leader.maxSpeed;
 
 		Vector3 targetPos = worldtarget + badMain.velocity * time;
-		targetPos = leader.Seek(targetPos);
+		targetPos = leader.Arrive(targetPos);
 
 		// Prevent movement in any other direction
 		return new Vector3(0, 0, targetPos.z);
