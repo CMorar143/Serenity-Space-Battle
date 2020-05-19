@@ -100,6 +100,7 @@ public class Mothership : MonoBehaviour
 	{
 		if (other.tag == "BadGuy" && gameObject.tag != other.tag)
 		{
+			gameObject.GetComponent<Protagonists>().SeekEnabled = false;
 			gameObject.GetComponent<Protagonists>().FleeEnabled = true;
 			gameObject.GetComponent<Protagonists>().fleeTarget = other.gameObject;
 		}
@@ -111,8 +112,9 @@ public class Mothership : MonoBehaviour
 		{
 			if (other.gameObject == gameObject.GetComponent<Protagonists>().fleeTarget)
 			{
-				gameObject.GetComponent<Protagonists>().fleeTarget = null;
+				//gameObject.GetComponent<Protagonists>().fleeTarget = null;
 				gameObject.GetComponent<Protagonists>().FleeEnabled = false;
+				gameObject.GetComponent<Protagonists>().SeekEnabled = true;
 			}
 		}
 	}

@@ -40,7 +40,7 @@ public class OffsetPursue : SteeringBehaviour
 			{
 				gameObject.GetComponent<OffsetPursue>().enabled = false;
 				Debug.Log("STANDOFF");
-				//gameObject.GetComponent<Flee>().enabled = true;
+				gameObject.GetComponent<Protagonists>().SeekEnabled = true;
 				return Vector3.zero;
 			}
 		}

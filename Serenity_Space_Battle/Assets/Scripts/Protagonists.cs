@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Protagonists : MonoBehaviour
 {
-	public Vector3 target = Vector3.zero;
+	//public Vector3 target = Vector3.zero;
 	public Vector3 force = Vector3.zero;
 	public Vector3 acceleration = Vector3.zero;
 	public Vector3 velocity = Vector3.zero;
@@ -12,6 +12,7 @@ public class Protagonists : MonoBehaviour
 	public float maxSpeed = 20.0f;
 
 	public GameObject fleeTarget;
+	public GameObject safeZone;
 	public float fleeDistance = 10;
 	public bool FleeEnabled = false;
 	public bool SeekEnabled = false;
@@ -50,7 +51,7 @@ public class Protagonists : MonoBehaviour
 
 		if (SeekEnabled)
 		{
-			force += Seek(target);
+			force += Seek(safeZone.transform.position);
 		}
 
 		if (FleeEnabled)
