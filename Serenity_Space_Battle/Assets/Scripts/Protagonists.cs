@@ -4,37 +4,22 @@ using UnityEngine;
 
 public class Protagonists : MonoBehaviour
 {
-	public GameObject[] protagonists;
-
+	public Vector3 target = Vector3.zero;
 	public Vector3 force = Vector3.zero;
 	public Vector3 acceleration = Vector3.zero;
 	public Vector3 velocity = Vector3.zero;
 	public float mass = 1;
-	public float maxSpeed = 35.0f;
-	public Transform target;
-	public bool arriveEnabled = false;
+	public float maxSpeed = 20.0f;
+
+	public GameObject fleeTarget;
+	public float fleeDistance = 10;
+	public bool FleeEnabled = false;
+	public bool SeekEnabled = false;
 
 	[Range(0.0f, 1.0f)]
 	public float banking = 0.1f;
 
 	public float damping = 0.01f;
-
-
-	// Use this for initialization
-	void Start()
-	{
-		// Only happen if its the leader
-		if (gameObject.tag != "GoodGuy")
-		{
-			protagonists = GameObject.FindGameObjectsWithTag("GoodGuy");
-
-			//foreach (GameObject goodGuy in protagonists)
-			//{
-			//	goodGuy.AddComponent<Protagonists>();
-			//	goodGuy.AddComponent<OffsetPursue>().badMain = this;
-			//}
-		}
-	}
 
 	public Vector3 Seek(Vector3 target)
 	{
@@ -44,43 +29,41 @@ public class Protagonists : MonoBehaviour
 		return desired - velocity;
 	}
 
-	public Vector3 Arrive(Vector3 target, float slowingDistance = 15.0f, float deceleration = 1.0f)
+	public Vector3 Flee(Vector3 target)
 	{
-		Vector3 toTarget = target - transform.position;
-
-		float distance = toTarget.magnitude;
-		if (distance < 7)
+		if (Vector3.Distance(transform.position, target) < fleeDistance)
 		{
-			arriveEnabled = false;
-			damping = 2.0f;
-
+			Vector3 desired = target - transform.position;
+			desired.Normalize();
+			desired *= maxSpeed;
+			return velocity - desired;
+		}
+		else
+		{
 			return Vector3.zero;
 		}
-		float ramped = maxSpeed * (distance / (slowingDistance * deceleration));
-
-		float clamped = Mathf.Min(ramped, maxSpeed);
-		Vector3 desired = clamped * (toTarget / distance);
-
-		return desired - velocity;
 	}
 
-
-	Vector3 CalculateForces()
+	public Vector3 CalculateForce()
 	{
-		force = Vector3.zero;
+		Vector3 force = Vector3.zero;
 
-		if (arriveEnabled)
+		if (SeekEnabled)
 		{
-			force += Arrive(target.position);
+			force += Seek(target);
+		}
+
+		if (FleeEnabled)
+		{
+			force += Flee(fleeTarget.transform.position);
 		}
 
 		return force;
 	}
 
-	// Update is called once per frame
-	void Update()
+	public void Update()
 	{
-		force = CalculateForces();
+		force = CalculateForce();
 		Vector3 acceleration = force / mass;
 
 		velocity += acceleration * Time.deltaTime;
