@@ -7,6 +7,7 @@ public class BattleBehaviour : MonoBehaviour
 	public GameObject[] protagonists;
 	public GameObject[] antagonists;
 	private bool standoffOccurred = false;
+	private bool continueCoroutine = true;
 
 	// Start is called before the first frame update
 	void Start()
@@ -18,7 +19,7 @@ public class BattleBehaviour : MonoBehaviour
 
 	IEnumerator CheckBattle()
 	{
-		while (true)
+		while (continueCoroutine)
 		{
 			standoffOccurred =
 				GameObject.FindGameObjectWithTag("GoodStartingPos").
@@ -26,7 +27,13 @@ public class BattleBehaviour : MonoBehaviour
 
 			if (standoffOccurred)
 			{
-				Debug.Log("in check battle");
+				for (int i = 0; i < antagonists.Length; i++)
+				{
+					antagonists[i].AddComponent<Pursue>().target = protagonists[Random.Range(1,3)];
+					antagonists[i].GetComponent<Pursue>().pursueEnabled = true;
+				}
+
+				continueCoroutine = false;
 			}
 
 			yield return new WaitForSeconds(2f);

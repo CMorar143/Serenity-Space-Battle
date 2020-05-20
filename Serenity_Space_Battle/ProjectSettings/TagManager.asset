@@ -9,6 +9,7 @@ TagManager:
   - Mothership
   - Serenity
   - GoodStartingPos
+  - safeZone
   layers:
   - Default
   - TransparentFX

@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 39379182}
   m_Layer: 0
   m_Name: safeZone
-  m_TagString: Untagged
+  m_TagString: safeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5057,6 +5057,7 @@ MonoBehaviour:
   mothership: {fileID: 1625264735}
   rotSpeed: 35
   speed: 1
+  leaderLeft: 0
   standoffOccurred: 0
 --- !u!1 &654643264
 GameObject:
@@ -5815,6 +5816,7 @@ MonoBehaviour:
   mothership: {fileID: 1718919957}
   rotSpeed: 35
   speed: 1
+  leaderLeft: 0
   standoffOccurred: 0
 --- !u!54 &1728442265
 Rigidbody:

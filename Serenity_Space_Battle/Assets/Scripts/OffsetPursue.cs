@@ -38,10 +38,13 @@ public class OffsetPursue : SteeringBehaviour
 		{
 			if (targetPos.z <= 3 && startingPos.GetComponent<cameraBehaviour>().leaderLeft)
 			{
+				GameObject serenity = GameObject.FindGameObjectWithTag("Serenity");
 				gameObject.GetComponent<OffsetPursue>().enabled = false;
 				startingPos.GetComponent<cameraBehaviour>().standoffOccurred = true;
 				Debug.Log("STANDOFF");
 				gameObject.GetComponent<Protagonists>().SeekEnabled = true;
+				serenity.AddComponent<Protagonists>().safeZone = GameObject.FindGameObjectWithTag("safeZone");
+				serenity.GetComponent<Protagonists>().SeekEnabled = true;
 				return Vector3.zero;
 			}
 		}
