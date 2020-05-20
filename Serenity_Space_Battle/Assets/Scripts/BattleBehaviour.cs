@@ -6,7 +6,6 @@ public class BattleBehaviour : MonoBehaviour
 {
 	public GameObject[] protagonists;
 	public GameObject[] antagonists;
-	//private GameObject serenity;
 	public AudioSource[] clips;
 	private bool standoffOccurred = false;
 	private bool continueCoroutine = true;
@@ -22,7 +21,6 @@ public class BattleBehaviour : MonoBehaviour
 		protagonists = GameObject.FindGameObjectsWithTag("GoodGuy");
 		antagonists = GameObject.FindGameObjectsWithTag("BadGuy");
 		clips = GetComponents<AudioSource>();
-		//serenity = GameObject.FindGameObjectWithTag("Serenity");
 		StartCoroutine(CheckBattle());
 	}
 
@@ -56,17 +54,18 @@ public class BattleBehaviour : MonoBehaviour
 
 			if (standoffOccurred)
 			{
+				clips[audioCounter].Play();
+				audioCounter++;
+
 				for (int i = 0; i < antagonists.Length; i++)
 				{
-					//antagonists[i].GetComponent<Mothership>().enabled = false;
+					antagonists[i].GetComponent<Mothership>().enabled = false;
 					antagonists[i].AddComponent<Pursue>().target = protagonists[Random.Range(1,3)];
 					antagonists[i].GetComponent<Pursue>().pursueEnabled = true;
 				}
 
 				continueCoroutine = false;
 				StartCoroutine(SwitchCamera());
-				clips[audioCounter].Play();
-				audioCounter++;
 			}
 
 			yield return new WaitForSeconds(2f);
