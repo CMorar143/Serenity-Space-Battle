@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pursue : MonoBehaviour
 {
 	private AudioSource clip;
+	public GameObject laserPrefab;
 	public GameObject target;
 	Vector3 targetPos;
 	public Vector3 force = Vector3.zero;
@@ -31,7 +32,10 @@ public class Pursue : MonoBehaviour
 		while (continueShooting)
 		{
 			yield return new WaitForSeconds(interval);
-			Debug.DrawLine(this.transform.position, target.transform.position);
+			//GameObject laser = Instantiate(laserPrefab);
+			//laser.GetComponent<Laser>().target = target.transform;
+			//laser.GetComponent<Renderer>().material.color = Color.red;
+			//laser.transform.LookAt(target.transform);
 			clip.Play();
 		}
 	}

@@ -76,6 +76,7 @@ public class BattleBehaviour : MonoBehaviour
 					antagonists[i].GetComponent<Mothership>().enabled = false;
 					antagonists[i].AddComponent<Pursue>().target = protagonists[Random.Range(1,3)];
 					antagonists[i].GetComponent<Pursue>().pursueEnabled = true;
+					//antagonists[i].GetComponent<Pursue>().laserPrefab = GameObject.FindGameObjectWithTag("Laser");
 				}
 
 				continueCoroutine = false;
