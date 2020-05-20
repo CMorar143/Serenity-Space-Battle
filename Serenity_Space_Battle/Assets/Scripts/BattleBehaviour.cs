@@ -8,6 +8,8 @@ public class BattleBehaviour : MonoBehaviour
 	public GameObject[] antagonists;
 	private bool standoffOccurred = false;
 	private bool continueCoroutine = true;
+	public Camera mainCam;
+	public Camera serenityCam;
 
 	// Start is called before the first frame update
 	void Start()
@@ -16,6 +18,16 @@ public class BattleBehaviour : MonoBehaviour
 		antagonists = GameObject.FindGameObjectsWithTag("BadGuy");
 		StartCoroutine(CheckBattle());
     }
+
+	IEnumerator SwitchCamera()
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(3f);
+			mainCam.enabled = !mainCam.enabled;
+			serenityCam.enabled = !serenityCam.enabled;
+		}
+	}
 
 	IEnumerator CheckBattle()
 	{
@@ -34,6 +46,7 @@ public class BattleBehaviour : MonoBehaviour
 				}
 
 				continueCoroutine = false;
+				StartCoroutine(SwitchCamera());
 			}
 
 			yield return new WaitForSeconds(2f);
