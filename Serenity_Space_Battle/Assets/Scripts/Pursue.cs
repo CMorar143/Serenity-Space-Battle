@@ -31,6 +31,7 @@ public class Pursue : MonoBehaviour
 		while (continueShooting)
 		{
 			yield return new WaitForSeconds(interval);
+			Debug.DrawLine(this.transform.position, target.transform.position);
 			clip.Play();
 		}
 	}
