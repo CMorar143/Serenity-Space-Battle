@@ -571,6 +571,7 @@ GameObject:
   - component: {fileID: 107822548}
   - component: {fileID: 107822546}
   - component: {fileID: 107822549}
+  - component: {fileID: 107822550}
   m_Layer: 0
   m_Name: bad_3
   m_TagString: BadGuy
@@ -718,6 +719,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &107822550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107822545}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+    type: 3}
+  target: {fileID: 0}
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 10
+  banking: 0.1
+  damping: 0.01
+  pursueEnabled: 0
+  continueShooting: 1
 --- !u!1 &247960524
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,6 +6235,7 @@ GameObject:
   - component: {fileID: 1615024602}
   - component: {fileID: 1615024601}
   - component: {fileID: 1615024603}
+  - component: {fileID: 1615024604}
   m_Layer: 0
   m_Name: bad_6
   m_TagString: BadGuy
@@ -6357,6 +6383,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1615024604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615024599}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+    type: 3}
+  target: {fileID: 0}
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 10
+  banking: 0.1
+  damping: 0.01
+  pursueEnabled: 0
+  continueShooting: 1
 --- !u!1 &1625264735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6650,6 +6700,7 @@ GameObject:
   - component: {fileID: 1721684619}
   - component: {fileID: 1721684618}
   - component: {fileID: 1721684620}
+  - component: {fileID: 1721684621}
   m_Layer: 0
   m_Name: bad_5
   m_TagString: BadGuy
@@ -6797,6 +6848,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1721684621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721684616}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+    type: 3}
+  target: {fileID: 0}
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 10
+  banking: 0.1
+  damping: 0.01
+  pursueEnabled: 0
+  continueShooting: 1
 --- !u!1 &1728442262
 GameObject:
   m_ObjectHideFlags: 0
@@ -7181,6 +7256,7 @@ GameObject:
   - component: {fileID: 1781630679}
   - component: {fileID: 1781630678}
   - component: {fileID: 1781630680}
+  - component: {fileID: 1781630681}
   m_Layer: 0
   m_Name: bad_4
   m_TagString: BadGuy
@@ -7328,6 +7404,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1781630681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781630676}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+    type: 3}
+  target: {fileID: 0}
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 10
+  banking: 0.1
+  damping: 0.01
+  pursueEnabled: 0
+  continueShooting: 1
 --- !u!1 &2047279505
 GameObject:
   m_ObjectHideFlags: 0
@@ -11917,6 +12017,7 @@ GameObject:
   - component: {fileID: 2711128119636292230}
   - component: {fileID: 2711128119636292229}
   - component: {fileID: 2711128119636292231}
+  - component: {fileID: 2711128119636292232}
   m_Layer: 0
   m_Name: bad_1
   m_TagString: BadGuy
@@ -12049,6 +12150,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2711128119636292232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711128119636292228}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+    type: 3}
+  target: {fileID: 0}
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 10
+  banking: 0.1
+  damping: 0.01
+  pursueEnabled: 0
+  continueShooting: 1
 --- !u!1 &2719001817102796540
 GameObject:
   m_ObjectHideFlags: 0
@@ -21682,6 +21807,7 @@ GameObject:
   - component: {fileID: 8303883816427421302}
   - component: {fileID: 8303883816427421301}
   - component: {fileID: 8303883816427421303}
+  - component: {fileID: 8303883816427421304}
   m_Layer: 0
   m_Name: bad_2
   m_TagString: BadGuy
@@ -21814,6 +21940,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8303883816427421304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303883816427421300}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+    type: 3}
+  target: {fileID: 0}
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 10
+  banking: 0.1
+  damping: 0.01
+  pursueEnabled: 0
+  continueShooting: 1
 --- !u!1 &8311457963941857797
 GameObject:
   m_ObjectHideFlags: 0

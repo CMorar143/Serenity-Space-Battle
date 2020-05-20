@@ -10,6 +10,7 @@ TagManager:
   - Serenity
   - GoodStartingPos
   - safeZone
+  - Laser
   layers:
   - Default
   - TransparentFX
