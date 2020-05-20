@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+  laserPrefab: {fileID: 9162771945238073175, guid: d95a06f45d6eab4408c9705a94c88ee0,
     type: 3}
   target: {fileID: 0}
   force: {x: 0, y: 0, z: 0}
@@ -5806,7 +5806,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 2}
 --- !u!54 &1166703234
 Rigidbody:
@@ -6395,7 +6395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+  laserPrefab: {fileID: 9162771945238073175, guid: d95a06f45d6eab4408c9705a94c88ee0,
     type: 3}
   target: {fileID: 0}
   force: {x: 0, y: 0, z: 0}
@@ -6860,7 +6860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+  laserPrefab: {fileID: 9162771945238073175, guid: d95a06f45d6eab4408c9705a94c88ee0,
     type: 3}
   target: {fileID: 0}
   force: {x: 0, y: 0, z: 0}
@@ -7416,7 +7416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+  laserPrefab: {fileID: 9162771945238073175, guid: d95a06f45d6eab4408c9705a94c88ee0,
     type: 3}
   target: {fileID: 0}
   force: {x: 0, y: 0, z: 0}
@@ -12162,7 +12162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+  laserPrefab: {fileID: 9162771945238073175, guid: d95a06f45d6eab4408c9705a94c88ee0,
     type: 3}
   target: {fileID: 0}
   force: {x: 0, y: 0, z: 0}
@@ -21952,7 +21952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c41933165ad0614bbcc7d91a8b13542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7059078011491937817, guid: d95a06f45d6eab4408c9705a94c88ee0,
+  laserPrefab: {fileID: 9162771945238073175, guid: d95a06f45d6eab4408c9705a94c88ee0,
     type: 3}
   target: {fileID: 0}
   force: {x: 0, y: 0, z: 0}

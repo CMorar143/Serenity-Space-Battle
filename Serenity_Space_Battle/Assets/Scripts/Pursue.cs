@@ -32,10 +32,11 @@ public class Pursue : MonoBehaviour
 		while (continueShooting)
 		{
 			yield return new WaitForSeconds(interval);
-			//GameObject laser = Instantiate(laserPrefab);
-			//laser.GetComponent<Laser>().target = target.transform;
-			//laser.GetComponent<Renderer>().material.color = Color.red;
-			//laser.transform.LookAt(target.transform);
+			GameObject laser = Instantiate(laserPrefab);
+			laser.GetComponent<Laser>().target = target.transform;
+			laser.GetComponent<Laser>().startPos = transform.position;
+			laser.GetComponent<Renderer>().material.color = Color.red;
+			laser.transform.LookAt(target.transform);
 			clip.Play();
 		}
 	}

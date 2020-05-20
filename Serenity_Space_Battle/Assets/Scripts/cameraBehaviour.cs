@@ -63,7 +63,6 @@ public class cameraBehaviour : MonoBehaviour
 
 		if (counter == 2)
 		{
-			Debug.Log("counter is 2");
 			GameObject.FindGameObjectWithTag("Serenity").GetComponent<Arrive>().enabled = true;
 
 			foreach (GameObject follower in GameObject.FindGameObjectsWithTag("GoodGuy"))

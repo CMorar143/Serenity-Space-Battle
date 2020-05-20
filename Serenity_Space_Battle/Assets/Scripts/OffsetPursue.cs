@@ -41,7 +41,6 @@ public class OffsetPursue : SteeringBehaviour
 				GameObject serenity = GameObject.FindGameObjectWithTag("Serenity");
 				gameObject.GetComponent<OffsetPursue>().enabled = false;
 				startingPos.GetComponent<cameraBehaviour>().standoffOccurred = true;
-				Debug.Log("STANDOFF");
 				gameObject.GetComponent<Protagonists>().SeekEnabled = true;
 				serenity.AddComponent<Protagonists>().safeZone = GameObject.FindGameObjectWithTag("safeZone");
 				serenity.GetComponent<Protagonists>().SeekEnabled = true;

@@ -45,13 +45,11 @@ public class Mothership : MonoBehaviour
 			{
 				if (gameObject.tag == "Serenity")
 				{
-					Debug.Log("serenity adding");
 					badGuy.AddComponent<Mothership>().maxSpeed = 70f;
 				}
 
 				else
 				{
-					Debug.Log("mothership adding");
 					badGuy.AddComponent<Mothership>();
 				}
 

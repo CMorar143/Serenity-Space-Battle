@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-	public float speed = 50f;
+	public float speed = 80f;
 	public Transform target;
 	public Vector3 startPos;
 	private float startTime;
@@ -14,7 +14,6 @@ public class Laser : MonoBehaviour
 	void Start()
 	{
 		startTime = Time.time;
-		startPos = transform.position;
 		journeyLength = Vector3.Distance(transform.position, target.position);
 		Invoke("KillMe", 1);
 	}
