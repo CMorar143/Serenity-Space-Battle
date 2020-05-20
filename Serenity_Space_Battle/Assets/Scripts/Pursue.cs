@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pursue : MonoBehaviour
 {
+	private AudioSource clip;
 	public GameObject target;
 	Vector3 targetPos;
 	public Vector3 force = Vector3.zero;
@@ -18,9 +19,19 @@ public class Pursue : MonoBehaviour
 	public float damping = 0.01f;
 	public bool pursueEnabled = false;
 
-	public void Start()
+	private void OnEnable()
 	{
-
+		StartCoroutine(Shooting(Random.Range(1f, 2f)));
+		clip = GetComponent<AudioSource>();
+	}
+	
+	IEnumerator Shooting(float interval)
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(interval);
+			clip.Play();
+		}
 	}
 
 	public Vector3 Seek(Vector3 target)
