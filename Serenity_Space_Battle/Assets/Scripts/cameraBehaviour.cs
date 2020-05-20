@@ -8,12 +8,12 @@ public class cameraBehaviour : MonoBehaviour
 	private Vector3 startingPos;
 	private Quaternion startingRot;
 	public GameObject mothership;
-	private AudioSource clip;
+	public AudioSource[] clips;
 	public float rotSpeed = 35.0f;
 	public float speed = 1.0f;
 
 	// For keeping track of coroutine
-	private int counter = 0;
+	public int counter = 0;
 	private bool isRunning = false;
 
 	// For keeping track of standoff completion
@@ -26,7 +26,7 @@ public class cameraBehaviour : MonoBehaviour
 		cam = GameObject.FindGameObjectWithTag("MainCamera");
 		startingPos = cam.transform.position;
 		startingRot = cam.transform.rotation;
-		clip = GetComponent<AudioSource>();
+		clips = GetComponents<AudioSource>();
 	}
 
 	IEnumerator LerpCamera(Vector3 source, Vector3 target, Quaternion rotDirection, float overTime)
@@ -34,9 +34,9 @@ public class cameraBehaviour : MonoBehaviour
 		isRunning = true;
 
 		// Everyone in pos, something coming through the cloud
-		if (!clip.isPlaying)
+		if (!clips[counter].isPlaying)
 		{
-			clip.Play();
+			clips[counter].Play();
 		}
 
 		yield return new WaitForSecondsRealtime(2f);

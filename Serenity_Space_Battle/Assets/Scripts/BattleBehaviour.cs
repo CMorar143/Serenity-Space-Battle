@@ -10,6 +10,7 @@ public class BattleBehaviour : MonoBehaviour
 	private bool continueCoroutine = true;
 	public Camera mainCam;
 	public Camera serenityCam;
+	private int counter = 0;
 
 	// Start is called before the first frame update
 	void Start()
@@ -21,11 +22,12 @@ public class BattleBehaviour : MonoBehaviour
 
 	IEnumerator SwitchCamera()
 	{
-		while (true)
+		while (true && counter <= 4)
 		{
-			yield return new WaitForSeconds(3f);
+			yield return new WaitForSeconds(4f);
 			mainCam.enabled = !mainCam.enabled;
 			serenityCam.enabled = !serenityCam.enabled;
+			counter++;
 		}
 	}
 
