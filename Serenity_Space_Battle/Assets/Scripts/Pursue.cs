@@ -18,6 +18,7 @@ public class Pursue : MonoBehaviour
 
 	public float damping = 0.01f;
 	public bool pursueEnabled = false;
+	public bool continueShooting = true;
 
 	private void OnEnable()
 	{
@@ -27,7 +28,7 @@ public class Pursue : MonoBehaviour
 	
 	IEnumerator Shooting(float interval)
 	{
-		while (true)
+		while (continueShooting)
 		{
 			yield return new WaitForSeconds(interval);
 			clip.Play();

@@ -26,22 +26,36 @@ public class BattleBehaviour : MonoBehaviour
 
 	IEnumerator SwitchCamera()
 	{
-		while (true && counter <= 4)
+		while (true && counter <= 3)
 		{
 			yield return new WaitForSeconds(4f);
 			mainCam.enabled = !mainCam.enabled;
 			serenityCam.enabled = !serenityCam.enabled;
 			counter++;
 
-			if (counter != 3 && audioCounter < clips.Length)
+			if (counter < 3 && audioCounter < clips.Length)
 			{
 				clips[audioCounter].Play();
 				audioCounter++;
 			}
 		}
+
+		if (audioCounter < clips.Length)
+		{
+			clips[audioCounter].Play();
+			audioCounter++;
+		}
+
 		mainCam.enabled = false;
 		serenityCam.enabled = false;
 		finalCam.enabled = true;
+
+		// Stop the shooting
+		foreach (GameObject badGuy in antagonists)
+		{
+			badGuy.GetComponent<Pursue>().continueShooting = false;
+		}
+
 	}
 
 	IEnumerator CheckBattle()
