@@ -68,10 +68,10 @@ public class cameraBehaviour : MonoBehaviour
 
 			foreach (GameObject follower in GameObject.FindGameObjectsWithTag("GoodGuy"))
 			{
-				Debug.Log("ent");
 				follower.GetComponent<OffsetPursue>().enabled = false;
-
 			}
+
+			clips[counter].Play();
 		}
 
 		isRunning = false;
@@ -88,9 +88,10 @@ public class cameraBehaviour : MonoBehaviour
 
 		else if (other.tag == "Serenity")
 		{
+			clips[counter].Play();
+
 			foreach (GameObject follower in GameObject.FindGameObjectsWithTag("GoodGuy"))
 			{
-				Debug.Log("ent");
 				follower.GetComponent<OffsetPursue>().enabled = true;
 				leaderLeft = true;
 			}
@@ -105,7 +106,6 @@ public class cameraBehaviour : MonoBehaviour
 			{
 				if (counter <= 1)
 				{
-					Debug.Log("its not running in trig stay");
 					StartCoroutine(LerpCamera(cam.transform.position, startingPos, startingRot, 3.0f));
 				}
 			}
