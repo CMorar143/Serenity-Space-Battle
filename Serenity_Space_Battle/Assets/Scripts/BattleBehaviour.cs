@@ -6,19 +6,22 @@ public class BattleBehaviour : MonoBehaviour
 {
 	public GameObject[] protagonists;
 	public GameObject[] antagonists;
+	public AudioSource[] clips;
 	private bool standoffOccurred = false;
 	private bool continueCoroutine = true;
 	public Camera mainCam;
 	public Camera serenityCam;
-	private int counter = 0;
+	public int counter = 0;
+	private int audioCounter = 0;
 
 	// Start is called before the first frame update
 	void Start()
     {
 		protagonists = GameObject.FindGameObjectsWithTag("GoodGuy");
 		antagonists = GameObject.FindGameObjectsWithTag("BadGuy");
+		clips = GetComponents<AudioSource>();
 		StartCoroutine(CheckBattle());
-    }
+	}
 
 	IEnumerator SwitchCamera()
 	{
@@ -28,6 +31,12 @@ public class BattleBehaviour : MonoBehaviour
 			mainCam.enabled = !mainCam.enabled;
 			serenityCam.enabled = !serenityCam.enabled;
 			counter++;
+
+			if (counter != 3 && audioCounter < clips.Length)
+			{
+				clips[audioCounter].Play();
+				audioCounter++;
+			}
 		}
 	}
 
@@ -49,6 +58,8 @@ public class BattleBehaviour : MonoBehaviour
 
 				continueCoroutine = false;
 				StartCoroutine(SwitchCamera());
+				clips[audioCounter].Play();
+				audioCounter++;
 			}
 
 			yield return new WaitForSeconds(2f);
