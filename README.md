@@ -9,7 +9,7 @@ The scene will start off with the antagonists moving up towards a fog/cloud wall
 
 At this point the protagonist ships are all on the other side of the cloud. The main protagonist (the Serenity ship) is given the arrive behaviour so it will arrive through the cloud. Just before the serenity ship starts its journey however, the other protagonist ships are given offset pursue (to pursue the serenity) but the offset pursue is then disabled. Once the serenity ship has assroved at it's destination, the offset pursue is enabled in the other protagonists. This was done so the Serenity is the first to arrive through the clouds, only to have more allies show up (as a surprise for the antagonists and the audience).
 
-After the standoff has occurred all of the enemy ships will randomly select one of the protagonist ships and then pursue them. The protagonists are all trying to get behind the enemy blockade. However, whenever one of the enemy ships gets too close to them, they will flee from the enemy ship until they are out of range. Once they are out of range they will go back to trying to get behind the blockade.
+After the standoff has occurred all of the enemy ships will randomly select one (by using tags) of the protagonist ships and then pursue them. The protagonists are all trying to get behind the enemy blockade. However, whenever one of the enemy ships gets too close to them, they will flee from the enemy ship until they are out of range. Once they are out of range they will go back to trying to get behind the blockade.
 
 ### Main scripts that I wrote
 - BattleBehaviour.cs
